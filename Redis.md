@@ -1,5 +1,5 @@
 ### Redis Provides in memory storage 
-- Used for caching 
+- Used for caching / database / messagebroker
 
 Meaning one a request is hit to db , the response gets cached in redis(in memory database) and hence upcoming reuqest if same can be served from redis instead of hitting db 
 
@@ -46,3 +46,29 @@ Best apporach would be Cleaer Redis , put data in postgres
 
 
 
+# Some command 
+Run Redis Stack on Docker
+
+To get started with Redis Stack using Docker, you first need to select a Docker image:
+
+- redis/redis-stack contains both Redis Stack server and Redis Insight. This container is best for local development because you can use the embedded Redis Insight to visualize your data.
+
+- redis/redis-stack-server provides Redis Stack server only. This container is best for production deployment.
+
+
+#### redis/redis-stack-server
+- To start Redis Stack server using the redis-stack-server image, run the following command in your terminal:
+
+docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
+
+#### redis/redis-stack container uisng  redis/redis-stack image 
+redis-stack provides beautiful gui client gi
+
+```javascript
+  docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+```
+
+Connect with redis-cli 
+```javascript
+docker exec -it redis
+```
