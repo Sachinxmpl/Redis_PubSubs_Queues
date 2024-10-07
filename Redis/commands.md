@@ -14,6 +14,16 @@ ping ==PONG
 
 
 ## Strings 
+
+-  set tracks "[{title : 'typescript', status : 'good'}]"
+- get tracks
+- del tracks 
+
+###### HSET/HGET/HDEL  hash 
+- HSET user:100 name "sachiin" email "random" age "30"
+- HGET user:100 name 
+- HGET user:100 email
+
 - set name sachin 
 - get name sachin 
 
@@ -51,6 +61,10 @@ Treat  lists as stack First in Lastout
 - lpush mammals dog
 - lpop mammals 
 - lpop mammals 
+
+BLocked pop stops the procees for some time and then continues (pub sub like usage )
+- blop problems 10 
+- blop problems 0  (blocks thread for infinite time )
 
 Check length of list 
 llen mammals 
