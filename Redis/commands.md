@@ -69,3 +69,14 @@ BLocked pop stops the procees for some time and then continues (pub sub like usa
 Check length of list 
 llen mammals 
 
+
+### Redis as pubsub 
+To subscribe 
+- subscribe first second 
+
+To publish 
+- publish second hello 
+- publish first world 
+
+To unsubscribe 
+- unsubscribe first second
